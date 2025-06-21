@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Dashboard</h2>
+    <div id="userInfo"></div>
+    <div id="createTicketButton"></div>
+
+    <!-- Search and Filter Section -->
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search by title..." />
+      <select id="filterStatus">
+        <option value="">All Status</option>
+        <option value="open">Open</option>
+        <option value="in-progress">In Progress</option>
+        <option value="resolved">Resolved</option>
+        <option value="closed">Closed</option>
+      </select>
+      <select id="filterPriority">
+        <option value="">All Priority</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="applyFilters">Apply</button>
+    </div>
+
+    <!-- Ticket Table -->
+    <table id="ticketTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Pagination Controls -->
+    <div id="pagination" class="pagination"></div>
+  </div>
+
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>
